@@ -1,0 +1,14 @@
+/node_modules/
+
+/.git/
+/app/css/
+/**/*.psd
+/**/Thumbs.db
+/**/*.DS_Store
+
+$ cat .gitignore
+*.[oa]
+*~
+.sass-cache/
+*.scssc
+node_modules/
