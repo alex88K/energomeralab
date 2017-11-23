@@ -8,19 +8,273 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 1024px)
+	.prime-line
+		.contact-b
+			margin-top: 32px
+			a
+				margin-left: 15px
+			.tel
+				display: none
+			.tel:first-child
+				display: block
+				display: inline-block
+			.tel,
+			.email
+				font-size: 0
+				.mail-i, 
+				.phone-i
+					width: 30px
+					height: 24px
 
+	.top-line
+		padding: 7px 0
+		.modal-btn
+			display: none
+
+	.advantages-item
+		flex-basis: 45%
+
+	.exp-docs 
+		img
+			max-width: 160px
+
+	.clients-list 
+		img
+			max-width: 175px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	.promo-b 
+		.contact-f-wrap
+			width: calc(100% + 30px)
+			margin-right: -15px
+			padding: 50px 0
+			background: -webkit-linear-gradient(left,rgba(34,43,100,1) 0,rgba(59,128,158,1) 100%)
+			background: -webkit-gradient(linear,left top,right top,from(rgba(34,43,100,1)),to(rgba(59,128,158,1)))
+			background: -o-linear-gradient(left,rgba(34,43,100,1) 0,rgba(59,128,158,1) 100%)
+			background: linear-gradient(to right,rgba(34,43,100,1) 0,rgba(59,128,158,1) 100%)
+			background-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222b64', endColorstr='#3b809e',GradientType=1 )
+		.contact-f
+			top: 0
+			transform: translateY(0)
+		.col
+			header
+				&:after
+					display: none
 
+	.service-list 
+		.service-item
+			flex-basis: 100%
+
+	.contact-section 
+		.contact-f 
+			.form-group
+				flex-basis: 23%
+
+@media only screen and (max-width : 767px)
+	body
+		font-size: 14px
+
+	.form-group
+		margin-bottom: 12px
+
+	.wslider 
+		.slick-next, 
+		.slick-prev
+			top: -75px
+
+	.section-title
+		margin-bottom: 35px
+		padding-bottom: 8px
+		font-size: 20px
+
+	.section-b
+		padding: 40px 0 50px 0
+
+	.promo-b
+		height: auto
+    	background-size: 100% 500px
+		h1
+			margin-top: 0
+			font-size: 26px
+		h2
+			font-size: 20px
+		.col header
+			top: 0
+			-webkit-transform: translateY(0)
+			-ms-transform: translateY(0)
+			transform: translateY(0)
+			margin-top: 20%
+			margin-bottom: 20%
+
+	.contact-f 
+		.form-title
+			font-size: 25px
+			span
+				font-size: 16px
+	
+	.advantages-item
+		flex-basis: 100%
+		min-height: auto
+
+	.advantages-desc
+		padding: 18px 40px 18px 55px
+		font-size: 15px
+
+	.advantages-i
+		width: 55px
+		height: 55px
+	
+	.contact-section 
+		.section-title
+			margin-bottom: 20px
+			font-size: 23px
+		.policy
+			margin-top: 0
+		.contact-f 
+			padding: 0 25px
+			justify-content: center
+			.form-group,
+			.form-group:last-child
+				flex-basis: 80%
+				margin-bottom: 30px
+
+	.service-list 
+		.service-item
+			margin-bottom: 8px
+			font-size: 15px
+
+	.stages-list
+		margin-left: 0
+		.stages-item 
+			margin-bottom: 15px
+			padding-left: 70px
+			font-size: 14px
+			background-size: 44px 40px
+			&:nth-child(1)
+				background-size: 46px 40px
+			&:nth-child(2)
+				background-size: 48px 40px
+			&:nth-child(3)
+				background-size: 50px 40px
+			&:nth-child(4)
+				background-size: 52px 40px
+			&:nth-child(5)
+				background-size: 54px 40px
+			&:nth-child(6)
+				background-size: 56px 40px
+			&:nth-child(7)
+				background-size: 58px 40px
+			&:before
+				left: 10px
+				margin-top: -12px
+				font-size: 18px
+			.stages-desc
+				max-width: 100%
+
+	.experience
+		.fleft,
+		.fright
+			float: none
+	
+	.exp-numbers
+		margin-bottom: 30px
+		font-size: 22px
+		span
+			font-size: 60px
+
+	.exp-docs 
+		margin-top: 30px
+		img
+			max-width: 150px
+	
+	.exp-map
+		min-height: 180px
+		font-size: 22px
+		background-size: 236px 135px
+
+	.exp-numbers,
+	.exp-map
+		margin-left: 30px
+
+	.clients-list 
+		li
+			margin-bottom: 5%
+
+	#map
+		height: 300px
+
+	.f-title
+		font-size: 15px
+
+	.f-row
+		.f-col:nth-child(2)
+			order: 3
+			flex-basis: 100%
+			padding-top: 10px
+		.f-col
+			flex-basis: 45%
+			flex-shrink: 1
+
+
+@media only screen and (max-width: 600px)
+	.clients-list 
+		img
+			max-width: 140px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-	/**/
+	.contact-section 
+		.contact-f 
+			.form-group,
+			.form-group:last-child
+				flex-basis: 100%
 
+	.exp-docs 
+		img
+			max-width: 140px
+		a
+			margin: 0 5px 15px 0
+			&:last-child
+				margin-right: 0
+
+	.clients-list 
+		img
+			max-width: 120px
+
+	.main-footer
+		padding: 25px 0
+
+	.f-row
+		.modal-btn
+			min-width: 120px
+		.f-col:first-child
+			p
+				font-size: 12px
+
+	.promo-b
+		background-size: 100% 250px
+		.col
+			header
+				display: flex
+				flex-direction: column
+				justify-content: center
+				height: 248px
+				margin: 0
+
+	.modal
+		.modal-body
+			padding: 0
+		.contact-f-wrap
+			width: 100%
+			.form-group
+				padding: 0
+
+@media only screen and (max-width : 420px)
+	.clients-list 
+		img
+			max-width: 90px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -45,11 +299,6 @@
 
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
-
+@media only screen and (min-width : 1024px)
+	.container
+		width: 990px

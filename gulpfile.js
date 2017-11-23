@@ -1,6 +1,7 @@
 var gulp           = require('gulp'),
 		gutil          = require('gulp-util' ),
 		sass           = require('gulp-sass'),
+		spritesmith 	= require('gulp.spritesmith');
 		browserSync    = require('browser-sync'),
 		concat         = require('gulp-concat'),
 		uglify         = require('gulp-uglify'),
@@ -13,6 +14,7 @@ var gulp           = require('gulp'),
 		ftp            = require('vinyl-ftp'),
 		notify         = require("gulp-notify"),
 		rsync          = require('gulp-rsync');
+		
 
 // Пользовательские скрипты проекта
 
@@ -28,12 +30,27 @@ gulp.task('common-js', function() {
 gulp.task('js', ['common-js'], function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/slick/slick.js',
+		'app/libs/maskedInput/maskedInput.min.js',
+		'app/libs/fancybox/dist/jquery.fancybox.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify()) // Минимизировать весь js (на выбор)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('sprite', function () {
+   return gulp.src('app/img/sprite-icons/**/*.png')
+   .pipe(spritesmith({
+   	imgName: 'sprite.png',
+   	cssName: 'sprite.sass',
+   	imgPath: '../img/sprites/sprite.png',
+   	padding: 20,
+   	algorithm: 'diagonal' 
+  	}))
+  	.pipe(gulp.dest('app/img/sprites/'));
 });
 
 gulp.task('browser-sync', function() {
@@ -57,7 +74,7 @@ gulp.task('sass', function() {
 	.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
+gulp.task('watch', ['sprite', 'sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload);
