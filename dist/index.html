@@ -21,7 +21,7 @@
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
 
-</head>
+</head>		
 
 <body class="ishome">
 	<div class="wrapper">
@@ -61,7 +61,11 @@
 						</div>
 						<div class="col col-lg-5 col-md-5 col-sm-6 col-xs-12">
 							<div class="contact-f-wrap fright">
-								<form action="#" class="contact-f">
+								<form action="mail.php" method="POST" class="contact-f">
+									<input type="hidden" name="project_name" value="Energomeralab">
+									<input type="hidden" name="admin_email" value="developzer@developzer.zzz.com.ua">
+									<input type="hidden" name="form_subject" value="Заявка">
+									<input type="text" name='as_url' class="as_url">
 									<div class="form-title">Оставьте заявку<span>на бесплатный выезд специалиста</span></div>
 									<div class="form-group">
 										<label>Ваше имя *</label>
@@ -77,8 +81,7 @@
 									</div>
 									<div class="form-group">
 										<label class="policy"><input type="checkbox" name="policy-ch" class="policy-ch" checked="checked">
-										Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <button class="collapse-btn">Узнать больше</button>
-										<div class="collapse-body"><p>Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «Смарт Флейм» в целях информирования о товарах и услугах ООО «Смарт Флейм», заключения и исполнения договора купли-продажи обрабатывать - собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать - мои персональные данные: фамилию, имя, номера рабочего и мобильного телефонов, адрес электронной почты, а также данные об интересах на основании анализа моих поисковых запросов и посещений Интернет-сайтов. Также я разрешаю ООО «Смарт Флейм» в целях информирования о товарах, работах, услугах направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона рекламу и информацию о товарах, работах, услугах ООО «Смарт Флейм» и его партнеров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу ООО «Смарт Флейм».</p></div>
+										Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <button class="collapse-btn" type="button" data-modal="modal-policy">Узнать больше</button>
 										</label>
 									</div>
 									<div class="form-group">
@@ -203,7 +206,11 @@
 				<div class="container">
 					<div class="section-title section-title__w">Хотите узнать больше? Отправьте заявку!</div>
 					<div class="section-content">
-						<form action="#" class="contact-f">
+						<form action="mail.php" method="POST" class="contact-f">
+							<input type="hidden" name="project_name" value="Energomeralab">
+							<input type="hidden" name="admin_email" value="developzer@developzer.zzz.com.ua">
+							<input type="hidden" name="form_subject" value="Заявка">
+							<input type="text" name='as_url' class="as_url">
 							<div class="form-group">
 								<input type="text" name="name" placeholder="Имя" required>
 							</div>
@@ -218,8 +225,7 @@
 							</div>
 							<div class="form-group">
 								<label class="policy"><input type="checkbox" name="policy-ch" class="policy-ch" checked="checked">
-								Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <button class="collapse-btn">Узнать больше</button>
-								<div class="collapse-body"><p>Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «Смарт Флейм» в целях информирования о товарах и услугах ООО «Смарт Флейм», заключения и исполнения договора купли-продажи обрабатывать - собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать - мои персональные данные: фамилию, имя, номера рабочего и мобильного телефонов, адрес электронной почты, а также данные об интересах на основании анализа моих поисковых запросов и посещений Интернет-сайтов. Также я разрешаю ООО «Смарт Флейм» в целях информирования о товарах, работах, услугах направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона рекламу и информацию о товарах, работах, услугах ООО «Смарт Флейм» и его партнеров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу ООО «Смарт Флейм».</p></div>
+								Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <button class="collapse-btn" type="button" data-modal="modal-policy">Узнать больше</button>
 								</label>
 							</div>
 						</form>
@@ -324,24 +330,19 @@
 			<div class="close-btn"></div>
 			<div class="modal-body">
 				<div class="contact-f-wrap">
-					<form action="#" class="contact-f">
+					<form action="mail.php" method="POST" class="contact-f">
+						<input type="hidden" name="project_name" value="Energomeralab">
+						<input type="hidden" name="admin_email" value="developzer@developzer.zzz.com.ua">
+						<input type="hidden" name="form_subject" value="Обратный звонок">
+						<input type="text" name='as_url' class="as_url">
 						<div class="form-title">Оставьте заявку<span>на бесплатный выезд специалиста</span></div>
-						<div class="form-group">
-							<label>Ваше имя *</label>
-							<input type="text" name="name" required>
-						</div>
-						<div class="form-group">
-							<label>Ваше email *</label>
-							<input type="email" name="email" required>
-						</div>
 						<div class="form-group">
 							<label>Ваше телефон *</label>
 							<input type="phone" name="phone" required>
 						</div>
 						<div class="form-group">
 							<label class="policy"><input type="checkbox" name="policy-ch" class="policy-ch" checked="checked">
-							Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности. <button class="collapse-btn">Узнать больше</button>
-							<div class="collapse-body"><p>Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «Смарт Флейм» в целях информирования о товарах и услугах ООО «Смарт Флейм», заключения и исполнения договора купли-продажи обрабатывать - собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать - мои персональные данные: фамилию, имя, номера рабочего и мобильного телефонов, адрес электронной почты, а также данные об интересах на основании анализа моих поисковых запросов и посещений Интернет-сайтов. Также я разрешаю ООО «Смарт Флейм» в целях информирования о товарах, работах, услугах направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона рекламу и информацию о товарах, работах, услугах ООО «Смарт Флейм» и его партнеров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу ООО «Смарт Флейм».</p></div>
+							Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности.<button class="collapse-btn" type="button" data-modal="modal-policy">Узнать больше</button>
 							</label>
 						</div>
 						<div class="form-group">
@@ -358,9 +359,18 @@
 		<div class="modal-wrap">
 			<div class="close-btn"></div>
 			<div class="modal-body">
-				<div class="modal-title">
-					<span>Спасибо за сообщение!</span></div>
+				<div class="modal-title"><span>Спасибо за сообщение!</span></div>
 				<p class="success-message">Мы скоро свяжемся с вами</p>
+			</div>	
+		</div>
+	</div>
+
+	<div id="modal-policy" class="modal modal-policy">
+		<div class="modal-overlay"></div>
+		<div class="modal-wrap">
+			<div class="close-btn"></div>
+			<div class="modal-body">
+				<p>Настоящим подтверждаю, что я ознакомлен и согласен с условиями Политики в отношении обработки персональных данных. Настоящим я даю разрешение ООО «Смарт Флейм» в целях информирования о товарах и услугах ООО «Смарт Флейм», заключения и исполнения договора купли-продажи обрабатывать - собирать, записывать, систематизировать, накапливать, хранить, уточнять (обновлять, изменять), извлекать, использовать, передавать (в том числе поручать обработку другим лицам), обезличивать, блокировать, удалять, уничтожать - мои персональные данные: фамилию, имя, номера рабочего и мобильного телефонов, адрес электронной почты, а также данные об интересах на основании анализа моих поисковых запросов и посещений Интернет-сайтов. Также я разрешаю ООО «Смарт Флейм» в целях информирования о товарах, работах, услугах направлять на указанный мною адрес электронной почты и/или на номер мобильного телефона рекламу и информацию о товарах, работах, услугах ООО «Смарт Флейм» и его партнеров. Согласие может быть отозвано мною в любой момент путем направления письменного уведомления по адресу ООО «Смарт Флейм».</p>
 			</div>	
 		</div>
 	</div>
@@ -384,6 +394,44 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzYqyOdrTC71lMst2k7vnvczbYcLX0yRM&callback=initMap">
     </script>
 	<script src="js/scripts.min.js"></script>
+	<script>
+		// AJAX Form submit
+		$(document).ready(function() {
+			$("form").submit(function() { 
+				var th = $(this);
+
+				if ( !$(this).find(".policy-ch").is(":checked") ) {
+					$(this).find(".policy").addClass('error');
+					
+					return false;
+				} else {
+					$(this).find(".policy").removeClass('error');
+				}
+
+				$.ajax({
+					type: "POST",
+					url: "mail.php",
+					data: th.serialize(),
+					success: function(data) {
+						var modalSuccess = "modal-success";
+
+						modalToggle('', true);
+						modalToggle(modalSuccess);
+
+						// close success message after 5 sec
+						var timer = setTimeout(function() { 
+							modalToggle(modalSuccess, true) 
+						}, 5000);
+					}
+				}).done(function() {
+					setTimeout(function() {
+						th.trigger("reset");
+					}, 5000);
+				});
+				return false;
+			});
+		});
+	</script>
 
 </body>
 </html>

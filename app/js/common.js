@@ -12,7 +12,7 @@ $(function() {
 			clearTimeout(scrollTimer);
 		}
 
-		scrollTimer = setTimeout(fixedTop(primePos), 100);
+		scrollTimer = setTimeout(fixedTop(primePos), 50);
 	});
 
 
@@ -78,43 +78,6 @@ $(function() {
 	if( $('input[name="phone"]').length ) {
 		$('input[name="phone"]').mask("+7 (999) 999-9999");
 	}
-	
-// AJAX Form submit
-
-	$(document).on('af_complete', function(event,response) {
-		var form_id = '' || response.form.parents('.modal').attr('id');
-		var modalSuccess = "modal-success";
-
-		if (response.success) {
-			// close modal on Success
-			if( form_id ) {
-				modalToggle(form_id);
-			}
-
-			modalToggle(modalSuccess);
-
-			// close success message after 5 sec
-			
-			var timer = setTimeout(function() { 
-				modalToggle(modalSuccess, true) 
-			}, 5000);
-		}
-	});
-
-
-// Collapser
-
-	$(".collapse-btn").on("click", function(e) {
-		e.preventDefault();
-
-		if ($(this).siblings(".collapse-body").hasClass("show")) {
-			$(this).html("Узнать больше");
-			$(this).siblings(".collapse-body").removeClass("show");
-		} else {
-			$(this).html("Скрыть");
-			$(this).siblings(".collapse-body").toggleClass("show");
-		}
-	});
 
 });
 
@@ -134,16 +97,17 @@ function modalToggle(modalWindow, closeOption) {
 function fixedTop(primePosition) {
 	scrollTimer = null; 
 
-	var topLine = $(".top-line");
-	var primeLine = $(".prime-line");
+	var mainHeader = $(".main-header");
 	var scrollTop = $(window).scrollTop();
+	var wrapper = $(".wrapper");
 
-	if (scrollTop > primePosition) {
-		primeLine.addClass("fixed");
-		topLine.addClass("spaced"); 
-	} else if (scrollTop < primePosition) {
-		primeLine.removeClass("fixed");
-		topLine.removeClass("spaced");
+	if (scrollTop > 0) {
+		mainHeader.addClass("fixed");
+		wrapper.addClass("fixed");
+
+	} else if (scrollTop < 2) {
+		mainHeader.removeClass("fixed");
+		wrapper.removeClass("fixed");
 	}
 }
 
